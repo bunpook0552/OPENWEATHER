@@ -1,0 +1,37 @@
+name: Auto Weather Map Update
+
+on:
+  schedule:
+    - cron: '0 * * * *' # รันทุกๆ 1 ชั่วโมง (นาทีที่ 0)
+  workflow_dispatch: # ปุ่มกดรันเองด้วยมือ (เผื่อใจร้อนอยากดูเลย)
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Libraries
+        run: pip install requests folium pytz
+
+      - name: Run Script
+        env:
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }} # ดึงกุญแจจาก Secret มาใช้
+        run: python build_map.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
+          keep_files: true
