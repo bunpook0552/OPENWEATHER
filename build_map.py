@@ -1,31 +1,38 @@
 import os
 import requests
 import folium
-from folium.features import DivIcon
+from folium import Icon, CustomIcon
 from datetime import datetime
 import pytz
 
-# 1. ดึง Key
+# 1. ดึง Key (เหมือนเดิม)
 API_KEY = os.environ.get('OPENWEATHER_API_KEY')
-if not API_KEY:
-    raise ValueError("❌ ไม่พบ API Key")
+if not API_KEY: raise ValueError("❌ ไม่พบ API Key")
 
-# 2. รายชื่อจุดตรวจวัด (อยากเพิ่มจุดไหน ก๊อปปี้บรรทัดเดิมแล้วแก้ชื่อ/พิกัด ได้เลย!)
+# 2. รายชื่อจุดตรวจวัด (ตรงนี้แหละที่คุณต้องเอาพิกัดเป๊ะๆ จาก Google Maps มาใส่!)
 locations = [
-    {"name": "ตลาดอินทร์บุรี", "lat": 15.006, "lon": 100.326},
+    {"name": "ตลาดอินทร์บุรี (จุดหลัก)", "lat": 15.0065, "lon": 100.3268}, # <-- ลองแก้พิกัดให้เป๊ะดูครับ
     {"name": "ต.ทับยา", "lat": 14.980, "lon": 100.310},
     {"name": "ต.ทองเอน", "lat": 15.050, "lon": 100.350},
     {"name": "ต.ชีน้ำร้าย", "lat": 14.950, "lon": 100.300},
     {"name": "ต.น้ำตาล", "lat": 14.990, "lon": 100.340},
     {"name": "ต.งิ้วราย", "lat": 14.970, "lon": 100.330},
     {"name": "ต.ประศุก", "lat": 15.030, "lon": 100.380},
-    {"name": "ต.โพธิ์ชัย", "lat": 14.960, "lon": 100.320}, # เพิ่มตัวอย่างให้ 1 จุด
 ]
 
-# 3. สร้างแผนที่ (Dark Mode)
-m = folium.Map(location=[15.006, 100.326], zoom_start=12, tiles='CartoDB dark_matter')
+# --- ลิงก์รูปไอคอนการ์ตูน 3D (ใช้ของฟรีจากเน็ตไปก่อน) ---
+# ถ้าในอนาคตคุณมีรูปสวยๆ ของตัวเอง สามารถเปลี่ยนลิงก์ตรงนี้ได้ครับ
+ICON_SUNNY = "https://cdn-icons-png.flaticon.com/512/2921/2921839.png"  # แดดออก (รูปดวงอาทิตย์ยิ้ม)
+ICON_RAINY = "https://cdn-icons-png.flaticon.com/512/2921/2921949.png"  # ฝนตก (รูปเมฆมีหยดน้ำ)
+ICON_STORM = "https://cdn-icons-png.flaticon.com/512/2921/2921970.png"  # พายุ (รูปเมฆมีสายฟ้า)
 
-print("กำลังดึงข้อมูลสภาพอากาศ V2...")
+
+# 3. สร้างแผนที่พื้นหลัง (เปลี่ยนจาก Dark Mode เป็นแนวสีน้ำ สว่างๆ น่ารัก)
+# ใช้ tiles='Stamen Watercolor' เพื่อให้ดูเป็นภาพวาด
+# หมายเหตุ: ถ้า Stamen โหลดช้า อาจเปลี่ยนเป็น 'OpenStreetMap' แทนได้ แต่จะไม่สวยเท่า
+m = folium.Map(location=[15.006, 100.326], zoom_start=12, tiles='OpenStreetMap')
+
+print("กำลังดึงข้อมูลสภาพอากาศ V3 (Cute Mode)...")
 
 for loc in locations:
     try:
@@ -39,67 +46,63 @@ for loc in locations:
         rain_1h = data.get('rain', {}).get('1h', 0)
         desc = data['weather'][0]['description']
 
-        # Logic สี และ ไอคอน
+        # Logic เลือกรูปไอคอนให้ตรงกับอากาศ
         if rain_1h > 10:
-            color = '#ff3333' # แดงฉาน
-            icon_char = "⛈️" # พายุ
-            status_alert = "style='color:red; font-weight:bold;'"
+            icon_url = ICON_STORM
+            status_text = "พายุเข้า!"
+            bg_color = "#ffcccc" # พื้นหลังpopupสีแดงอ่อน
         elif rain_1h > 0:
-            color = '#00ccff' # ฟ้า
-            icon_char = "🌧️" # ฝน
-            status_alert = "style='color:skyblue;'"
+            icon_url = ICON_RAINY
+            status_text = "มีฝนตก"
+            bg_color = "#ccf2ff" # พื้นหลังpopupสีฟ้าอ่อน
         else:
-            color = '#00ff88' # เขียวนีออน
-            icon_char = "☁️" # เมฆ/ปกติ
-            status_alert = ""
+            icon_url = ICON_SUNNY
+            status_text = "อากาศดี"
+            bg_color = "#ccffcc" # พื้นหลังpopupสีเขียวอ่อน
 
-        # --- ส่วนแสดงผลบนแผนที่ (Label) แบบไม่ต้องคลิก ---
-        # 1. วงกลมสี (พื้นหลัง)
-        folium.CircleMarker(
+        # สร้างไอคอนแบบกำหนดเอง (CustomIcon)
+        weather_icon = CustomIcon(
+            icon_image=icon_url,
+            icon_size=(60, 60), # ขนาดไอคอน (ปรับให้ใหญ่ขึ้นจะได้ดูเป็น 3D ชัดๆ)
+            icon_anchor=(30, 60), # จุดปัก (ให้ตรงกลางด้านล่างของรูปปักลงพิกัดพอดี)
+            popup_anchor=(0, -60) # จุดที่ Popup เด้งขึ้นมา
+        )
+
+        # สร้าง Popup แบบน่ารักๆ
+        popup_html = f"""
+        <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: {bg_color}; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">
+            <h4 style="margin:0; color:#333;">🏡 {loc['name']}</h4>
+            <img src="{icon_url}" width="50" style="margin: 5px;">
+            <br>
+            <b style="color:#555; font-size: 16px;">{status_text}</b><br>
+            <span style="font-size: 14px;">( {desc} )</span><br>
+            <hr style="border-top: 1px dashed #999;">
+            🌡️ อุณหภูมิ: <b>{temp}°C</b><br>
+            💧 ฝน 1 ชม.: <b>{rain_1h} มม.</b>
+        </div>
+        """
+
+        # ปักหมุดลงแผนที่ (ใช้ Marker แทน CircleMarker)
+        folium.Marker(
             location=[loc['lat'], loc['lon']],
-            radius=6,
-            color=color,
-            fill=True,
-            fill_color=color,
-            fill_opacity=1.0,
-            popup=f"{loc['name']}: {desc}"
-        ).add_to(m)
-
-        # 2. ข้อความลอย (Text Label)
-        folium.map.Marker(
-            [loc['lat'], loc['lon']],
-            icon=DivIcon(
-                icon_size=(150,36),
-                icon_anchor=(0,0),
-                # HTML ตรงนี้คือสิ่งที่โชว์บนแผนที่ตลอดเวลา
-                html=f"""
-                    <div style="font-size: 12px; font-weight: bold; color: {color}; text-shadow: 1px 1px 2px black; margin-left: 10px; margin-top: -8px;">
-                        {icon_char} {loc['name']}<br>
-                        🌡️ {temp}°C | 💧 {rain_1h} มม.
-                    </div>
-                """
-            )
+            icon=weather_icon,
+            popup=folium.Popup(popup_html, max_width=250)
         ).add_to(m)
 
     except Exception as e:
         print(f"Error {loc['name']}: {e}")
 
-# 4. Dashboard Overlay (กรอบสรุปข้อมูลมุมขวาบน)
+# 4. ป้ายชื่อโครงการแบบน่ารัก (มุมซ้ายล่าง)
 tz = pytz.timezone('Asia/Bangkok')
 update_time = datetime.now(tz).strftime("%H:%M")
 
-legend_html = f'''
-     <div style="position: fixed; top: 10px; right: 10px; z-index:9999; font-size:14px; background:rgba(0,0,0,0.8); padding:10px; border-radius:5px; border: 1px solid #444; color: white; width: 200px;">
-         <h4 style="margin:0; color:#00ff88;">📡 In Buri War Room</h4>
-         <hr style="border-color:#555; margin: 5px 0;">
-         <small>🕒 อัปเดต: {update_time} น.</small><br>
-         <br>
-         <span style="color:#ff3333;">⛈️</span> = ฝนตกหนัก<br>
-         <span style="color:#00ccff;">🌧️</span> = มีฝน<br>
-         <span style="color:#00ff88;">☁️</span> = ปกติ
+title_html = f'''
+     <div style="position: fixed; bottom: 20px; left: 20px; z-index:9999; font-family: 'Comic Sans MS', cursive; background: white; padding: 15px; border-radius: 20px; border: 3px solid #FFD700; box-shadow: 5px 5px 0px #FF9900;">
+         <h3 style="margin:0; color:#FF6600; text-shadow: 1px 1px 0px #FFCC00;">🌈 แผนที่อากาศอินทร์บุรี</h3>
+         <small style="color:#666;">อัปเดตล่าสุด: {update_time} น.</small>
      </div>
      '''
-m.get_root().html.add_child(folium.Element(legend_html))
+m.get_root().html.add_child(folium.Element(title_html))
 
 m.save("index.html")
-print("🎉 อัปเกรดหน้าตาสำเร็จ!")
+print("🎉 เปลี่ยนเป็นธีมการ์ตูนน่ารักสำเร็จ!")
