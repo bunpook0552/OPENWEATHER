@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_85b48ea3d88de4a52114f9be5bffc5d6 {
+                #map_b5a96ff32266feb1616ba943d0a0b6fb {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,20 +54,25 @@
 <body>
     
     
-     <div style="position: fixed; bottom: 50px; left: 50px; z-index:9999; font-size:14px; color:white; background:rgba(0,0,0,0.7); padding:10px; border-radius:5px;">
-         <b>📡 Auto Weather In Buri</b><br>
-         ข้อมูลอัปเดต: 27/01/2026 16:35
+     <div style="position: fixed; top: 10px; right: 10px; z-index:9999; font-size:14px; background:rgba(0,0,0,0.8); padding:10px; border-radius:5px; border: 1px solid #444; color: white; width: 200px;">
+         <h4 style="margin:0; color:#00ff88;">📡 In Buri War Room</h4>
+         <hr style="border-color:#555; margin: 5px 0;">
+         <small>🕒 อัปเดต: 16:39 น.</small><br>
+         <br>
+         <span style="color:#ff3333;">⛈️</span> = ฝนตกหนัก<br>
+         <span style="color:#00ccff;">🌧️</span> = มีฝน<br>
+         <span style="color:#00ff88;">☁️</span> = ปกติ
      </div>
      
     
-            <div class="folium-map" id="map_85b48ea3d88de4a52114f9be5bffc5d6" ></div>
+            <div class="folium-map" id="map_b5a96ff32266feb1616ba943d0a0b6fb" ></div>
         
 </body>
 <script>
     
     
-            var map_85b48ea3d88de4a52114f9be5bffc5d6 = L.map(
-                "map_85b48ea3d88de4a52114f9be5bffc5d6",
+            var map_b5a96ff32266feb1616ba943d0a0b6fb = L.map(
+                "map_b5a96ff32266feb1616ba943d0a0b6fb",
                 {
                     center: [15.006, 100.326],
                     crs: L.CRS.EPSG3857,
@@ -84,7 +89,7 @@
 
         
     
-            var tile_layer_328a3f4229fd742d112c9481e468f7ff = L.tileLayer(
+            var tile_layer_fd12ec12b4495117297c6736ab04c786 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -101,145 +106,335 @@
             );
         
     
-            tile_layer_328a3f4229fd742d112c9481e468f7ff.addTo(map_85b48ea3d88de4a52114f9be5bffc5d6);
+            tile_layer_fd12ec12b4495117297c6736ab04c786.addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
         
     
-            var circle_marker_5dbde04a3386cf8270b0a2a166ed9501 = L.circleMarker(
+            var circle_marker_a0447691770e9fd07271272d6522a86f = L.circleMarker(
                 [15.006, 100.326],
-                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_85b48ea3d88de4a52114f9be5bffc5d6);
+                {"bubblingMouseEvents": true, "color": "#00ff88", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff88", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
         
     
-        var popup_1ecad61b9f5c48ff6562fb585718cb3b = L.popup({
-  "maxWidth": 300,
+        var popup_c47548fe2597241f47195c68f1bcd67d = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_e02f78a69387d92d84d0f81b42fb5cc9 = $(`<div id="html_e02f78a69387d92d84d0f81b42fb5cc9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ตลาดอินทร์บุรี</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 25.74 °C         </div>         </div>`)[0];
-                popup_1ecad61b9f5c48ff6562fb585718cb3b.setContent(html_e02f78a69387d92d84d0f81b42fb5cc9);
+                var html_5bd5f54c6e824886ce049d26ff3c6d1e = $(`<div id="html_5bd5f54c6e824886ce049d26ff3c6d1e" style="width: 100.0%; height: 100.0%;">ตลาดอินทร์บุรี: ท้องฟ้าแจ่มใส</div>`)[0];
+                popup_c47548fe2597241f47195c68f1bcd67d.setContent(html_5bd5f54c6e824886ce049d26ff3c6d1e);
             
         
 
-        circle_marker_5dbde04a3386cf8270b0a2a166ed9501.bindPopup(popup_1ecad61b9f5c48ff6562fb585718cb3b)
+        circle_marker_a0447691770e9fd07271272d6522a86f.bindPopup(popup_c47548fe2597241f47195c68f1bcd67d)
         ;
 
         
     
     
-            var circle_marker_d79c2d7c2ad365f88354371f10aecc1f = L.circleMarker(
+            var marker_411ec98040d97a7d1c7de71bcf844ed6 = L.marker(
+                [15.006, 100.326],
+                {
+}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+            var div_icon_b03afb9f1c721565148a7194eccea26e = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 12px; font-weight: bold; color: #00ff88; text-shadow: 1px 1px 2px black; margin-left: 10px; margin-top: -8px;\"\u003e\n                        \u2601\ufe0f \u0e15\u0e25\u0e32\u0e14\u0e2d\u0e34\u0e19\u0e17\u0e23\u0e4c\u0e1a\u0e38\u0e23\u0e35\u003cbr\u003e\n                        \ud83c\udf21\ufe0f 25.7\u00b0C | \ud83d\udca7 0 \u0e21\u0e21.\n                    \u003c/div\u003e\n                ",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_411ec98040d97a7d1c7de71bcf844ed6.setIcon(div_icon_b03afb9f1c721565148a7194eccea26e);
+            
+    
+            var circle_marker_acaf32b44e2c664144ff5d004d8fe526 = L.circleMarker(
                 [14.98, 100.31],
-                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_85b48ea3d88de4a52114f9be5bffc5d6);
+                {"bubblingMouseEvents": true, "color": "#00ff88", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff88", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
         
     
-        var popup_ee4fab539c305ba2ca089831611b30f1 = L.popup({
-  "maxWidth": 300,
+        var popup_3e6d372bb6c243a3cf7bcaf3feb9d462 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_66f37537e58a6a3e3673a1705f35af01 = $(`<div id="html_66f37537e58a6a3e3673a1705f35af01" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.ทับยา</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 25.37 °C         </div>         </div>`)[0];
-                popup_ee4fab539c305ba2ca089831611b30f1.setContent(html_66f37537e58a6a3e3673a1705f35af01);
+                var html_b43177054f62054e75d7f39d803cea63 = $(`<div id="html_b43177054f62054e75d7f39d803cea63" style="width: 100.0%; height: 100.0%;">ต.ทับยา: ท้องฟ้าแจ่มใส</div>`)[0];
+                popup_3e6d372bb6c243a3cf7bcaf3feb9d462.setContent(html_b43177054f62054e75d7f39d803cea63);
             
         
 
-        circle_marker_d79c2d7c2ad365f88354371f10aecc1f.bindPopup(popup_ee4fab539c305ba2ca089831611b30f1)
+        circle_marker_acaf32b44e2c664144ff5d004d8fe526.bindPopup(popup_3e6d372bb6c243a3cf7bcaf3feb9d462)
         ;
 
         
     
     
-            var circle_marker_05a293fed51b85c4fbb182d99eea0ecd = L.circleMarker(
+            var marker_52802184d90ee0fd4a7c7c45b06b0de7 = L.marker(
+                [14.98, 100.31],
+                {
+}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+            var div_icon_9d644c23e7a424b429340d304b0405e0 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 12px; font-weight: bold; color: #00ff88; text-shadow: 1px 1px 2px black; margin-left: 10px; margin-top: -8px;\"\u003e\n                        \u2601\ufe0f \u0e15.\u0e17\u0e31\u0e1a\u0e22\u0e32\u003cbr\u003e\n                        \ud83c\udf21\ufe0f 25.4\u00b0C | \ud83d\udca7 0 \u0e21\u0e21.\n                    \u003c/div\u003e\n                ",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_52802184d90ee0fd4a7c7c45b06b0de7.setIcon(div_icon_9d644c23e7a424b429340d304b0405e0);
+            
+    
+            var circle_marker_d4ce22233d57547c5538632defb26ac0 = L.circleMarker(
                 [15.05, 100.35],
-                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_85b48ea3d88de4a52114f9be5bffc5d6);
+                {"bubblingMouseEvents": true, "color": "#00ff88", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff88", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
         
     
-        var popup_bafd9345bc0c5aeb17698d4a61409af9 = L.popup({
-  "maxWidth": 300,
+        var popup_b853501f0589c63d1793328f30f31b33 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_e6a424625bd747511efb016280442cac = $(`<div id="html_e6a424625bd747511efb016280442cac" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.ทองเอน</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 25.62 °C         </div>         </div>`)[0];
-                popup_bafd9345bc0c5aeb17698d4a61409af9.setContent(html_e6a424625bd747511efb016280442cac);
+                var html_e240aa27f7778d0f13cedf92dbe25aca = $(`<div id="html_e240aa27f7778d0f13cedf92dbe25aca" style="width: 100.0%; height: 100.0%;">ต.ทองเอน: ท้องฟ้าแจ่มใส</div>`)[0];
+                popup_b853501f0589c63d1793328f30f31b33.setContent(html_e240aa27f7778d0f13cedf92dbe25aca);
             
         
 
-        circle_marker_05a293fed51b85c4fbb182d99eea0ecd.bindPopup(popup_bafd9345bc0c5aeb17698d4a61409af9)
+        circle_marker_d4ce22233d57547c5538632defb26ac0.bindPopup(popup_b853501f0589c63d1793328f30f31b33)
         ;
 
         
     
     
-            var circle_marker_2be43aff0fdc8728e139b77dd69fecdc = L.circleMarker(
+            var marker_78b3159eb53aca1cb0fc97a4201618e1 = L.marker(
+                [15.05, 100.35],
+                {
+}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+            var div_icon_8a6f3f430a71cc65b00abecf3be9b0f4 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 12px; font-weight: bold; color: #00ff88; text-shadow: 1px 1px 2px black; margin-left: 10px; margin-top: -8px;\"\u003e\n                        \u2601\ufe0f \u0e15.\u0e17\u0e2d\u0e07\u0e40\u0e2d\u0e19\u003cbr\u003e\n                        \ud83c\udf21\ufe0f 25.6\u00b0C | \ud83d\udca7 0 \u0e21\u0e21.\n                    \u003c/div\u003e\n                ",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_78b3159eb53aca1cb0fc97a4201618e1.setIcon(div_icon_8a6f3f430a71cc65b00abecf3be9b0f4);
+            
+    
+            var circle_marker_51d12428196bc4ea586fe53b94945845 = L.circleMarker(
                 [14.95, 100.3],
-                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_85b48ea3d88de4a52114f9be5bffc5d6);
+                {"bubblingMouseEvents": true, "color": "#00ff88", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff88", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
         
     
-        var popup_0665f703255972fc90378e4af71cb22b = L.popup({
-  "maxWidth": 300,
+        var popup_0305fb0b1852a6bbf1f2863414082b1f = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_e5f1748d51c190129bb7e18ba969936c = $(`<div id="html_e5f1748d51c190129bb7e18ba969936c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.ชีน้ำร้าย</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 25.7 °C         </div>         </div>`)[0];
-                popup_0665f703255972fc90378e4af71cb22b.setContent(html_e5f1748d51c190129bb7e18ba969936c);
+                var html_b260ae919909b29c3ee520b1a4380575 = $(`<div id="html_b260ae919909b29c3ee520b1a4380575" style="width: 100.0%; height: 100.0%;">ต.ชีน้ำร้าย: ท้องฟ้าแจ่มใส</div>`)[0];
+                popup_0305fb0b1852a6bbf1f2863414082b1f.setContent(html_b260ae919909b29c3ee520b1a4380575);
             
         
 
-        circle_marker_2be43aff0fdc8728e139b77dd69fecdc.bindPopup(popup_0665f703255972fc90378e4af71cb22b)
+        circle_marker_51d12428196bc4ea586fe53b94945845.bindPopup(popup_0305fb0b1852a6bbf1f2863414082b1f)
         ;
 
         
     
     
-            var circle_marker_d1f070029b6fc4f22b8322dab3fe7617 = L.circleMarker(
+            var marker_94047211c6772837464ab2785ef3860a = L.marker(
+                [14.95, 100.3],
+                {
+}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+            var div_icon_1c0010c78062417ab54041bcd63df935 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 12px; font-weight: bold; color: #00ff88; text-shadow: 1px 1px 2px black; margin-left: 10px; margin-top: -8px;\"\u003e\n                        \u2601\ufe0f \u0e15.\u0e0a\u0e35\u0e19\u0e49\u0e33\u0e23\u0e49\u0e32\u0e22\u003cbr\u003e\n                        \ud83c\udf21\ufe0f 25.7\u00b0C | \ud83d\udca7 0 \u0e21\u0e21.\n                    \u003c/div\u003e\n                ",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_94047211c6772837464ab2785ef3860a.setIcon(div_icon_1c0010c78062417ab54041bcd63df935);
+            
+    
+            var circle_marker_191f0de0b6373b518a7ad917ed640113 = L.circleMarker(
                 [14.99, 100.34],
-                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_85b48ea3d88de4a52114f9be5bffc5d6);
+                {"bubblingMouseEvents": true, "color": "#00ff88", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff88", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
         
     
-        var popup_9153fa8d5e96edc93d435caa8cdae4c7 = L.popup({
-  "maxWidth": 300,
+        var popup_ccfd806b865116304e64432dd1aaff18 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_f7af13ec232e9cdde1e53ddc839707ae = $(`<div id="html_f7af13ec232e9cdde1e53ddc839707ae" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.น้ำตาล</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 25.74 °C         </div>         </div>`)[0];
-                popup_9153fa8d5e96edc93d435caa8cdae4c7.setContent(html_f7af13ec232e9cdde1e53ddc839707ae);
+                var html_b80ef15f5e16607a62012cf5f960013b = $(`<div id="html_b80ef15f5e16607a62012cf5f960013b" style="width: 100.0%; height: 100.0%;">ต.น้ำตาล: ท้องฟ้าแจ่มใส</div>`)[0];
+                popup_ccfd806b865116304e64432dd1aaff18.setContent(html_b80ef15f5e16607a62012cf5f960013b);
             
         
 
-        circle_marker_d1f070029b6fc4f22b8322dab3fe7617.bindPopup(popup_9153fa8d5e96edc93d435caa8cdae4c7)
+        circle_marker_191f0de0b6373b518a7ad917ed640113.bindPopup(popup_ccfd806b865116304e64432dd1aaff18)
         ;
 
         
     
     
-            var circle_marker_7dd9c0590010eefad86fbee97104db7d = L.circleMarker(
+            var marker_ba7a795d6e75fe68b19e63490c58a461 = L.marker(
+                [14.99, 100.34],
+                {
+}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+            var div_icon_8add24ac25fd81bc81434f8e59051339 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 12px; font-weight: bold; color: #00ff88; text-shadow: 1px 1px 2px black; margin-left: 10px; margin-top: -8px;\"\u003e\n                        \u2601\ufe0f \u0e15.\u0e19\u0e49\u0e33\u0e15\u0e32\u0e25\u003cbr\u003e\n                        \ud83c\udf21\ufe0f 25.7\u00b0C | \ud83d\udca7 0 \u0e21\u0e21.\n                    \u003c/div\u003e\n                ",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_ba7a795d6e75fe68b19e63490c58a461.setIcon(div_icon_8add24ac25fd81bc81434f8e59051339);
+            
+    
+            var circle_marker_e155ffd18a1c27a79ea5dba9e2630d1e = L.circleMarker(
                 [14.97, 100.33],
-                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_85b48ea3d88de4a52114f9be5bffc5d6);
+                {"bubblingMouseEvents": true, "color": "#00ff88", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff88", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
         
     
-        var popup_fe966775891bbc02b179c57ade0c6916 = L.popup({
-  "maxWidth": 300,
+        var popup_acf0888eb510ca0de42334df5b1d17f9 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_1d902925e825ad257c7f6562770cf480 = $(`<div id="html_1d902925e825ad257c7f6562770cf480" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.งิ้วราย</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 26.06 °C         </div>         </div>`)[0];
-                popup_fe966775891bbc02b179c57ade0c6916.setContent(html_1d902925e825ad257c7f6562770cf480);
+                var html_494d58a00549387806b2309abb086855 = $(`<div id="html_494d58a00549387806b2309abb086855" style="width: 100.0%; height: 100.0%;">ต.งิ้วราย: ท้องฟ้าแจ่มใส</div>`)[0];
+                popup_acf0888eb510ca0de42334df5b1d17f9.setContent(html_494d58a00549387806b2309abb086855);
             
         
 
-        circle_marker_7dd9c0590010eefad86fbee97104db7d.bindPopup(popup_fe966775891bbc02b179c57ade0c6916)
+        circle_marker_e155ffd18a1c27a79ea5dba9e2630d1e.bindPopup(popup_acf0888eb510ca0de42334df5b1d17f9)
         ;
 
         
     
+    
+            var marker_1faf36cfd33c13bc916daf2404a99e85 = L.marker(
+                [14.97, 100.33],
+                {
+}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+            var div_icon_926bbb55b7915684d17eece95570bbb0 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 12px; font-weight: bold; color: #00ff88; text-shadow: 1px 1px 2px black; margin-left: 10px; margin-top: -8px;\"\u003e\n                        \u2601\ufe0f \u0e15.\u0e07\u0e34\u0e49\u0e27\u0e23\u0e32\u0e22\u003cbr\u003e\n                        \ud83c\udf21\ufe0f 26.1\u00b0C | \ud83d\udca7 0 \u0e21\u0e21.\n                    \u003c/div\u003e\n                ",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_1faf36cfd33c13bc916daf2404a99e85.setIcon(div_icon_926bbb55b7915684d17eece95570bbb0);
+            
+    
+            var circle_marker_43dc9305d0bc08ede3d7c632122afae1 = L.circleMarker(
+                [15.03, 100.38],
+                {"bubblingMouseEvents": true, "color": "#00ff88", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff88", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+        var popup_1249b5204901d58db10738f75cc206dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a61026f3e2c9d71372eae33e05569d3e = $(`<div id="html_a61026f3e2c9d71372eae33e05569d3e" style="width: 100.0%; height: 100.0%;">ต.ประศุก: ท้องฟ้าแจ่มใส</div>`)[0];
+                popup_1249b5204901d58db10738f75cc206dc.setContent(html_a61026f3e2c9d71372eae33e05569d3e);
+            
+        
+
+        circle_marker_43dc9305d0bc08ede3d7c632122afae1.bindPopup(popup_1249b5204901d58db10738f75cc206dc)
+        ;
+
+        
+    
+    
+            var marker_67e66d26f8776042b00f5d007c73eee0 = L.marker(
+                [15.03, 100.38],
+                {
+}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+            var div_icon_9ff778b51e80fd3386da6df083770f61 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 12px; font-weight: bold; color: #00ff88; text-shadow: 1px 1px 2px black; margin-left: 10px; margin-top: -8px;\"\u003e\n                        \u2601\ufe0f \u0e15.\u0e1b\u0e23\u0e30\u0e28\u0e38\u0e01\u003cbr\u003e\n                        \ud83c\udf21\ufe0f 26.3\u00b0C | \ud83d\udca7 0 \u0e21\u0e21.\n                    \u003c/div\u003e\n                ",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_67e66d26f8776042b00f5d007c73eee0.setIcon(div_icon_9ff778b51e80fd3386da6df083770f61);
+            
+    
+            var circle_marker_ae59ff7c310ceb3b811bc350f6e88a76 = L.circleMarker(
+                [14.96, 100.32],
+                {"bubblingMouseEvents": true, "color": "#00ff88", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff88", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+        var popup_6493fd5ba66731255bc1cc4b783e6de6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d08b642de74c5d639f000077a4b325e0 = $(`<div id="html_d08b642de74c5d639f000077a4b325e0" style="width: 100.0%; height: 100.0%;">ต.โพธิ์ชัย: ท้องฟ้าแจ่มใส</div>`)[0];
+                popup_6493fd5ba66731255bc1cc4b783e6de6.setContent(html_d08b642de74c5d639f000077a4b325e0);
+            
+        
+
+        circle_marker_ae59ff7c310ceb3b811bc350f6e88a76.bindPopup(popup_6493fd5ba66731255bc1cc4b783e6de6)
+        ;
+
+        
+    
+    
+            var marker_aa8d6dbea78992d0e8183b73996bb0f5 = L.marker(
+                [14.96, 100.32],
+                {
+}
+            ).addTo(map_b5a96ff32266feb1616ba943d0a0b6fb);
+        
+    
+            var div_icon_65c1a832c33d7c4bc2138790ab11a837 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 12px; font-weight: bold; color: #00ff88; text-shadow: 1px 1px 2px black; margin-left: 10px; margin-top: -8px;\"\u003e\n                        \u2601\ufe0f \u0e15.\u0e42\u0e1e\u0e18\u0e34\u0e4c\u0e0a\u0e31\u0e22\u003cbr\u003e\n                        \ud83c\udf21\ufe0f 26.1\u00b0C | \ud83d\udca7 0 \u0e21\u0e21.\n                    \u003c/div\u003e\n                ",
+  "iconSize": [150, 36],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_aa8d6dbea78992d0e8183b73996bb0f5.setIcon(div_icon_65c1a832c33d7c4bc2138790ab11a837);
+            
 </script>
 </html>
