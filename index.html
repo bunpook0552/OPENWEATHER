@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_6f4e33ef01779824f91809876b9c8bba {
+                #map_d3fb6c8e66b0a0b4ce266bff35735a0c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,18 +56,18 @@
     
      <div style="position: fixed; bottom: 50px; left: 50px; z-index:9999; font-size:14px; color:white; background:rgba(0,0,0,0.7); padding:10px; border-radius:5px;">
          <b>📡 Auto Weather In Buri</b><br>
-         ข้อมูลอัปเดต: 27/01/2026 14:35
+         ข้อมูลอัปเดต: 27/01/2026 15:35
      </div>
      
     
-            <div class="folium-map" id="map_6f4e33ef01779824f91809876b9c8bba" ></div>
+            <div class="folium-map" id="map_d3fb6c8e66b0a0b4ce266bff35735a0c" ></div>
         
 </body>
 <script>
     
     
-            var map_6f4e33ef01779824f91809876b9c8bba = L.map(
-                "map_6f4e33ef01779824f91809876b9c8bba",
+            var map_d3fb6c8e66b0a0b4ce266bff35735a0c = L.map(
+                "map_d3fb6c8e66b0a0b4ce266bff35735a0c",
                 {
                     center: [15.006, 100.326],
                     crs: L.CRS.EPSG3857,
@@ -84,7 +84,7 @@
 
         
     
-            var tile_layer_9657eb93b69989018e182dd594f8907b = L.tileLayer(
+            var tile_layer_ce8e5da91ebaf374e32b48ab6e7eeee2 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -101,7 +101,145 @@
             );
         
     
-            tile_layer_9657eb93b69989018e182dd594f8907b.addTo(map_6f4e33ef01779824f91809876b9c8bba);
+            tile_layer_ce8e5da91ebaf374e32b48ab6e7eeee2.addTo(map_d3fb6c8e66b0a0b4ce266bff35735a0c);
         
+    
+            var circle_marker_e03d3c95a55a6b480e44c6b4321a5ea1 = L.circleMarker(
+                [15.006, 100.326],
+                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d3fb6c8e66b0a0b4ce266bff35735a0c);
+        
+    
+        var popup_6fdc6067be399110b823732f3d20cc88 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e7e0bdb5201a215936ecdd3b3a791c4 = $(`<div id="html_0e7e0bdb5201a215936ecdd3b3a791c4" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ตลาดอินทร์บุรี</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 33.02 °C         </div>         </div>`)[0];
+                popup_6fdc6067be399110b823732f3d20cc88.setContent(html_0e7e0bdb5201a215936ecdd3b3a791c4);
+            
+        
+
+        circle_marker_e03d3c95a55a6b480e44c6b4321a5ea1.bindPopup(popup_6fdc6067be399110b823732f3d20cc88)
+        ;
+
+        
+    
+    
+            var circle_marker_ca12085e20668da56a6954a0dc566f1e = L.circleMarker(
+                [14.98, 100.31],
+                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d3fb6c8e66b0a0b4ce266bff35735a0c);
+        
+    
+        var popup_641e7d885363e7d5462b38277550b4e1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f1f2a33e739d08804b92c12b875aec8f = $(`<div id="html_f1f2a33e739d08804b92c12b875aec8f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.ทับยา</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 33.07 °C         </div>         </div>`)[0];
+                popup_641e7d885363e7d5462b38277550b4e1.setContent(html_f1f2a33e739d08804b92c12b875aec8f);
+            
+        
+
+        circle_marker_ca12085e20668da56a6954a0dc566f1e.bindPopup(popup_641e7d885363e7d5462b38277550b4e1)
+        ;
+
+        
+    
+    
+            var circle_marker_ed5c3c0e1c2014e7ff513b556234aeb0 = L.circleMarker(
+                [15.05, 100.35],
+                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d3fb6c8e66b0a0b4ce266bff35735a0c);
+        
+    
+        var popup_14d92344a04022de08b06cb6d7754561 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_97d7de13b02d7048bda428b5e4a913e6 = $(`<div id="html_97d7de13b02d7048bda428b5e4a913e6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.ทองเอน</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 32.93 °C         </div>         </div>`)[0];
+                popup_14d92344a04022de08b06cb6d7754561.setContent(html_97d7de13b02d7048bda428b5e4a913e6);
+            
+        
+
+        circle_marker_ed5c3c0e1c2014e7ff513b556234aeb0.bindPopup(popup_14d92344a04022de08b06cb6d7754561)
+        ;
+
+        
+    
+    
+            var circle_marker_e1c333526de381b2419fcb9ebed0d4c1 = L.circleMarker(
+                [14.95, 100.3],
+                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d3fb6c8e66b0a0b4ce266bff35735a0c);
+        
+    
+        var popup_daa30a118e8ca3458e1dce44b562002e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cbb2f3414d69601ad616c20764707a70 = $(`<div id="html_cbb2f3414d69601ad616c20764707a70" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.ชีน้ำร้าย</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 33.11 °C         </div>         </div>`)[0];
+                popup_daa30a118e8ca3458e1dce44b562002e.setContent(html_cbb2f3414d69601ad616c20764707a70);
+            
+        
+
+        circle_marker_e1c333526de381b2419fcb9ebed0d4c1.bindPopup(popup_daa30a118e8ca3458e1dce44b562002e)
+        ;
+
+        
+    
+    
+            var circle_marker_dcadca2bd6cd5ca6f72ba370b65cf621 = L.circleMarker(
+                [14.99, 100.34],
+                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d3fb6c8e66b0a0b4ce266bff35735a0c);
+        
+    
+        var popup_94538d01bf46c72c62d0a5fb8f25aabc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ccd59cf13b12a46ca9e333b792a6c0f1 = $(`<div id="html_ccd59cf13b12a46ca9e333b792a6c0f1" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.น้ำตาล</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 33.02 °C         </div>         </div>`)[0];
+                popup_94538d01bf46c72c62d0a5fb8f25aabc.setContent(html_ccd59cf13b12a46ca9e333b792a6c0f1);
+            
+        
+
+        circle_marker_dcadca2bd6cd5ca6f72ba370b65cf621.bindPopup(popup_94538d01bf46c72c62d0a5fb8f25aabc)
+        ;
+
+        
+    
+    
+            var circle_marker_4d5277ffc31dc3ef66176f9462f9295b = L.circleMarker(
+                [14.97, 100.33],
+                {"bubblingMouseEvents": true, "color": "#00ff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_d3fb6c8e66b0a0b4ce266bff35735a0c);
+        
+    
+        var popup_582cb5aad52f325fb0554b3edcdb4293 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dc96da8807b888366df7112d5b1ce350 = $(`<div id="html_dc96da8807b888366df7112d5b1ce350" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 200px;">             <h4>📍 ต.งิ้วราย</h4>             <b>สถานะ:</b> ☁️ ปกติ (ท้องฟ้าแจ่มใส)<br>             <b>ฝน (1ชม.):</b> 0 มม.<br>             <b>อุณหภูมิ:</b> 33.06 °C         </div>         </div>`)[0];
+                popup_582cb5aad52f325fb0554b3edcdb4293.setContent(html_dc96da8807b888366df7112d5b1ce350);
+            
+        
+
+        circle_marker_4d5277ffc31dc3ef66176f9462f9295b.bindPopup(popup_582cb5aad52f325fb0554b3edcdb4293)
+        ;
+
+        
+    
 </script>
 </html>
