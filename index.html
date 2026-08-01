@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_917fee81f100c7ff5179bc7b10bbd8bc {
+                #map_e0529f298b567e6181d1f5cd020729ab {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,18 +56,18 @@
     
      <div style="position: fixed; bottom: 20px; left: 20px; z-index:9999; font-family: 'Comic Sans MS', cursive; background: white; padding: 15px; border-radius: 20px; border: 3px solid #FFD700; box-shadow: 5px 5px 0px #FF9900;">
          <h3 style="margin:0; color:#FF6600; text-shadow: 1px 1px 0px #FFCC00;">🌈 แผนที่อากาศอินทร์บุรี</h3>
-         <small style="color:#666;">อัปเดตล่าสุด: 19:02 น.</small>
+         <small style="color:#666;">อัปเดตล่าสุด: 21:26 น.</small>
      </div>
      
     
-            <div class="folium-map" id="map_917fee81f100c7ff5179bc7b10bbd8bc" ></div>
+            <div class="folium-map" id="map_e0529f298b567e6181d1f5cd020729ab" ></div>
         
 </body>
 <script>
     
     
-            var map_917fee81f100c7ff5179bc7b10bbd8bc = L.map(
-                "map_917fee81f100c7ff5179bc7b10bbd8bc",
+            var map_e0529f298b567e6181d1f5cd020729ab = L.map(
+                "map_e0529f298b567e6181d1f5cd020729ab",
                 {
                     center: [15.006, 100.326],
                     crs: L.CRS.EPSG3857,
@@ -84,7 +84,7 @@
 
         
     
-            var tile_layer_d8aa9911b59dd6beaa5744d01dc0ac14 = L.tileLayer(
+            var tile_layer_c3644da278147edb3bca672a38e90bea = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -101,17 +101,17 @@
             );
         
     
-            tile_layer_d8aa9911b59dd6beaa5744d01dc0ac14.addTo(map_917fee81f100c7ff5179bc7b10bbd8bc);
+            tile_layer_c3644da278147edb3bca672a38e90bea.addTo(map_e0529f298b567e6181d1f5cd020729ab);
         
     
-            var marker_301ce00cdabd753d494e41e33ab4b945 = L.marker(
+            var marker_b8639aa1dd3de7421b978d20ff3f4d50 = L.marker(
                 [15.0065, 100.3268],
                 {
 }
-            ).addTo(map_917fee81f100c7ff5179bc7b10bbd8bc);
+            ).addTo(map_e0529f298b567e6181d1f5cd020729ab);
         
     
-        var icon_17207fc067b9edd5f14fb6d8c9614097 = L.icon({
+        var icon_7d41be9c6d8820ef4b06578d2d9b1237 = L.icon({
   "iconUrl": "https://cdn-icons-png.flaticon.com/512/2921/2921949.png",
   "iconSize": [60, 60],
   "iconAnchor": [30, 60],
@@ -119,34 +119,34 @@
 });
         
     
-        var popup_3da91c1bca7c7c5f15cadecfe5731474 = L.popup({
+        var popup_4890c18330dccd943a14ff0b5a03dec2 = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_23a2ae5fcd5f90e17aec67c87895eecb = $(`<div id="html_23a2ae5fcd5f90e17aec67c87895eecb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ตลาดอินทร์บุรี (จุดหลัก)</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนปานกลาง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>31.8°C</b><br>             💧 ฝน 1 ชม.: <b>1.41 มม.</b>         </div>         </div>`)[0];
-                popup_3da91c1bca7c7c5f15cadecfe5731474.setContent(html_23a2ae5fcd5f90e17aec67c87895eecb);
+                var html_f100de5f340bb0240c68221fb219b3c5 = $(`<div id="html_f100de5f340bb0240c68221fb219b3c5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ตลาดอินทร์บุรี (จุดหลัก)</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนแบบแรง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>28.8°C</b><br>             💧 ฝน 1 ชม.: <b>5.31 มม.</b>         </div>         </div>`)[0];
+                popup_4890c18330dccd943a14ff0b5a03dec2.setContent(html_f100de5f340bb0240c68221fb219b3c5);
             
         
 
-        marker_301ce00cdabd753d494e41e33ab4b945.bindPopup(popup_3da91c1bca7c7c5f15cadecfe5731474)
+        marker_b8639aa1dd3de7421b978d20ff3f4d50.bindPopup(popup_4890c18330dccd943a14ff0b5a03dec2)
         ;
 
         
     
     
-                marker_301ce00cdabd753d494e41e33ab4b945.setIcon(icon_17207fc067b9edd5f14fb6d8c9614097);
+                marker_b8639aa1dd3de7421b978d20ff3f4d50.setIcon(icon_7d41be9c6d8820ef4b06578d2d9b1237);
             
     
-            var marker_4a4ee372a4db8a5f5ac93ff833dde2d7 = L.marker(
+            var marker_da859babd920bc2c0cd128e413b6dabe = L.marker(
                 [14.98, 100.31],
                 {
 }
-            ).addTo(map_917fee81f100c7ff5179bc7b10bbd8bc);
+            ).addTo(map_e0529f298b567e6181d1f5cd020729ab);
         
     
-        var icon_df0a8c491f5cc1aadd86304e002f45ac = L.icon({
+        var icon_e36660e27416d61f8c6e7793de4fde7b = L.icon({
   "iconUrl": "https://cdn-icons-png.flaticon.com/512/2921/2921949.png",
   "iconSize": [60, 60],
   "iconAnchor": [30, 60],
@@ -154,34 +154,34 @@
 });
         
     
-        var popup_6e88c9bf95862b52435057cadc6373a1 = L.popup({
+        var popup_8d8787bff951614d43ce786b5bd7e4fe = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_d7bfa58205c5aae8e2ae2e245df8ba4a = $(`<div id="html_d7bfa58205c5aae8e2ae2e245df8ba4a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.ทับยา</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนแบบแรง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>31.8°C</b><br>             💧 ฝน 1 ชม.: <b>4.47 มม.</b>         </div>         </div>`)[0];
-                popup_6e88c9bf95862b52435057cadc6373a1.setContent(html_d7bfa58205c5aae8e2ae2e245df8ba4a);
+                var html_b4dc38ebc5720d90488b67c43e2174f6 = $(`<div id="html_b4dc38ebc5720d90488b67c43e2174f6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.ทับยา</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนแบบแรง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>28.8°C</b><br>             💧 ฝน 1 ชม.: <b>6.48 มม.</b>         </div>         </div>`)[0];
+                popup_8d8787bff951614d43ce786b5bd7e4fe.setContent(html_b4dc38ebc5720d90488b67c43e2174f6);
             
         
 
-        marker_4a4ee372a4db8a5f5ac93ff833dde2d7.bindPopup(popup_6e88c9bf95862b52435057cadc6373a1)
+        marker_da859babd920bc2c0cd128e413b6dabe.bindPopup(popup_8d8787bff951614d43ce786b5bd7e4fe)
         ;
 
         
     
     
-                marker_4a4ee372a4db8a5f5ac93ff833dde2d7.setIcon(icon_df0a8c491f5cc1aadd86304e002f45ac);
+                marker_da859babd920bc2c0cd128e413b6dabe.setIcon(icon_e36660e27416d61f8c6e7793de4fde7b);
             
     
-            var marker_f44c11e11e1f958d1542f819bed13171 = L.marker(
+            var marker_5223f7d1f0051094d3a7f6465da1d21f = L.marker(
                 [15.05, 100.35],
                 {
 }
-            ).addTo(map_917fee81f100c7ff5179bc7b10bbd8bc);
+            ).addTo(map_e0529f298b567e6181d1f5cd020729ab);
         
     
-        var icon_3cb35be02182c2953b90ec52fcea5413 = L.icon({
+        var icon_4b579f2404f0e01f7fcf85a5137f616b = L.icon({
   "iconUrl": "https://cdn-icons-png.flaticon.com/512/2921/2921949.png",
   "iconSize": [60, 60],
   "iconAnchor": [30, 60],
@@ -189,34 +189,34 @@
 });
         
     
-        var popup_07b44c45eacb4caa1d155bf104498b40 = L.popup({
+        var popup_8931dd558e481764f22f745a58ec8bc0 = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_7049d313d09234971af7f724de74a0a6 = $(`<div id="html_7049d313d09234971af7f724de74a0a6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.ทองเอน</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนเบา ๆ )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>31.8°C</b><br>             💧 ฝน 1 ชม.: <b>0.52 มม.</b>         </div>         </div>`)[0];
-                popup_07b44c45eacb4caa1d155bf104498b40.setContent(html_7049d313d09234971af7f724de74a0a6);
+                var html_7de0430fbccf8652c68bfa81fa7923fa = $(`<div id="html_7de0430fbccf8652c68bfa81fa7923fa" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.ทองเอน</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนปานกลาง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>28.8°C</b><br>             💧 ฝน 1 ชม.: <b>3.45 มม.</b>         </div>         </div>`)[0];
+                popup_8931dd558e481764f22f745a58ec8bc0.setContent(html_7de0430fbccf8652c68bfa81fa7923fa);
             
         
 
-        marker_f44c11e11e1f958d1542f819bed13171.bindPopup(popup_07b44c45eacb4caa1d155bf104498b40)
+        marker_5223f7d1f0051094d3a7f6465da1d21f.bindPopup(popup_8931dd558e481764f22f745a58ec8bc0)
         ;
 
         
     
     
-                marker_f44c11e11e1f958d1542f819bed13171.setIcon(icon_3cb35be02182c2953b90ec52fcea5413);
+                marker_5223f7d1f0051094d3a7f6465da1d21f.setIcon(icon_4b579f2404f0e01f7fcf85a5137f616b);
             
     
-            var marker_6a8263a9df3a9a23ba5cdd53eac8ba53 = L.marker(
+            var marker_52a19d8f10676f555c2493ed396874bb = L.marker(
                 [14.95, 100.3],
                 {
 }
-            ).addTo(map_917fee81f100c7ff5179bc7b10bbd8bc);
+            ).addTo(map_e0529f298b567e6181d1f5cd020729ab);
         
     
-        var icon_1d17f202d7ec74773a1dec415653aea1 = L.icon({
+        var icon_1a6d64e7ea88ba4b2238c6c955b03777 = L.icon({
   "iconUrl": "https://cdn-icons-png.flaticon.com/512/2921/2921949.png",
   "iconSize": [60, 60],
   "iconAnchor": [30, 60],
@@ -224,34 +224,34 @@
 });
         
     
-        var popup_81b6981997d7b0ddb783c483798bf764 = L.popup({
+        var popup_60f51fda3b85517059b1d6d3d6edab42 = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_ff766471c87f0957b064c78051b612b5 = $(`<div id="html_ff766471c87f0957b064c78051b612b5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.ชีน้ำร้าย</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนแบบแรง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>31.9°C</b><br>             💧 ฝน 1 ชม.: <b>5.96 มม.</b>         </div>         </div>`)[0];
-                popup_81b6981997d7b0ddb783c483798bf764.setContent(html_ff766471c87f0957b064c78051b612b5);
+                var html_57b385db68a8dd463b4c41c9db2086a7 = $(`<div id="html_57b385db68a8dd463b4c41c9db2086a7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.ชีน้ำร้าย</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนแบบแรง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>28.9°C</b><br>             💧 ฝน 1 ชม.: <b>6.48 มม.</b>         </div>         </div>`)[0];
+                popup_60f51fda3b85517059b1d6d3d6edab42.setContent(html_57b385db68a8dd463b4c41c9db2086a7);
             
         
 
-        marker_6a8263a9df3a9a23ba5cdd53eac8ba53.bindPopup(popup_81b6981997d7b0ddb783c483798bf764)
+        marker_52a19d8f10676f555c2493ed396874bb.bindPopup(popup_60f51fda3b85517059b1d6d3d6edab42)
         ;
 
         
     
     
-                marker_6a8263a9df3a9a23ba5cdd53eac8ba53.setIcon(icon_1d17f202d7ec74773a1dec415653aea1);
+                marker_52a19d8f10676f555c2493ed396874bb.setIcon(icon_1a6d64e7ea88ba4b2238c6c955b03777);
             
     
-            var marker_e8166dc6f45abdcdb0aa55d3720a09bf = L.marker(
+            var marker_a84885895c9779f799a2855af1e1f320 = L.marker(
                 [14.99, 100.34],
                 {
 }
-            ).addTo(map_917fee81f100c7ff5179bc7b10bbd8bc);
+            ).addTo(map_e0529f298b567e6181d1f5cd020729ab);
         
     
-        var icon_edb96727d6b77ffc5ffb9e6a785ab41c = L.icon({
+        var icon_7b9319699e5c5d78cdb6298d6c6dbb4c = L.icon({
   "iconUrl": "https://cdn-icons-png.flaticon.com/512/2921/2921949.png",
   "iconSize": [60, 60],
   "iconAnchor": [30, 60],
@@ -259,34 +259,34 @@
 });
         
     
-        var popup_3d14a4c5e48faf87ccaaeb1887357957 = L.popup({
+        var popup_b0f556e6830892fe6ee744ee80f6dcce = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_e237f5acdefcafa3391d49ff26307f2f = $(`<div id="html_e237f5acdefcafa3391d49ff26307f2f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.น้ำตาล</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนปานกลาง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>31.8°C</b><br>             💧 ฝน 1 ชม.: <b>2.32 มม.</b>         </div>         </div>`)[0];
-                popup_3d14a4c5e48faf87ccaaeb1887357957.setContent(html_e237f5acdefcafa3391d49ff26307f2f);
+                var html_d1b7005a3acde98138c86b7b9dc92adb = $(`<div id="html_d1b7005a3acde98138c86b7b9dc92adb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.น้ำตาล</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนแบบแรง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>28.8°C</b><br>             💧 ฝน 1 ชม.: <b>5.62 มม.</b>         </div>         </div>`)[0];
+                popup_b0f556e6830892fe6ee744ee80f6dcce.setContent(html_d1b7005a3acde98138c86b7b9dc92adb);
             
         
 
-        marker_e8166dc6f45abdcdb0aa55d3720a09bf.bindPopup(popup_3d14a4c5e48faf87ccaaeb1887357957)
+        marker_a84885895c9779f799a2855af1e1f320.bindPopup(popup_b0f556e6830892fe6ee744ee80f6dcce)
         ;
 
         
     
     
-                marker_e8166dc6f45abdcdb0aa55d3720a09bf.setIcon(icon_edb96727d6b77ffc5ffb9e6a785ab41c);
+                marker_a84885895c9779f799a2855af1e1f320.setIcon(icon_7b9319699e5c5d78cdb6298d6c6dbb4c);
             
     
-            var marker_240b64dfcde6fb93c029a2e9fe85771a = L.marker(
+            var marker_de0e73bc6430c2d8c87c9e2aecfcc660 = L.marker(
                 [14.97, 100.33],
                 {
 }
-            ).addTo(map_917fee81f100c7ff5179bc7b10bbd8bc);
+            ).addTo(map_e0529f298b567e6181d1f5cd020729ab);
         
     
-        var icon_b9a084e9cec9e7943afd3cee7dd1851e = L.icon({
+        var icon_a999f942bd58c09638905ec92a29591c = L.icon({
   "iconUrl": "https://cdn-icons-png.flaticon.com/512/2921/2921949.png",
   "iconSize": [60, 60],
   "iconAnchor": [30, 60],
@@ -294,34 +294,34 @@
 });
         
     
-        var popup_caa3b01bcf7c70543eb8a84723e5e4e9 = L.popup({
+        var popup_1c848c2186417767f293cd9c4019e25c = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_4e98caadb9a072c6230e2472ac6eb42c = $(`<div id="html_4e98caadb9a072c6230e2472ac6eb42c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.งิ้วราย</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนปานกลาง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>31.9°C</b><br>             💧 ฝน 1 ชม.: <b>3.87 มม.</b>         </div>         </div>`)[0];
-                popup_caa3b01bcf7c70543eb8a84723e5e4e9.setContent(html_4e98caadb9a072c6230e2472ac6eb42c);
+                var html_4706b17f37ca02155f9213e403b94b7a = $(`<div id="html_4706b17f37ca02155f9213e403b94b7a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.งิ้วราย</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนแบบแรง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>28.9°C</b><br>             💧 ฝน 1 ชม.: <b>6.48 มม.</b>         </div>         </div>`)[0];
+                popup_1c848c2186417767f293cd9c4019e25c.setContent(html_4706b17f37ca02155f9213e403b94b7a);
             
         
 
-        marker_240b64dfcde6fb93c029a2e9fe85771a.bindPopup(popup_caa3b01bcf7c70543eb8a84723e5e4e9)
+        marker_de0e73bc6430c2d8c87c9e2aecfcc660.bindPopup(popup_1c848c2186417767f293cd9c4019e25c)
         ;
 
         
     
     
-                marker_240b64dfcde6fb93c029a2e9fe85771a.setIcon(icon_b9a084e9cec9e7943afd3cee7dd1851e);
+                marker_de0e73bc6430c2d8c87c9e2aecfcc660.setIcon(icon_a999f942bd58c09638905ec92a29591c);
             
     
-            var marker_67c2c8cb9f2a06d8f8052a0fe79db4cf = L.marker(
+            var marker_d97701e09f8f4a58b56da3836b71e320 = L.marker(
                 [15.03, 100.38],
                 {
 }
-            ).addTo(map_917fee81f100c7ff5179bc7b10bbd8bc);
+            ).addTo(map_e0529f298b567e6181d1f5cd020729ab);
         
     
-        var icon_7ad206ce799607cbee736058206f314d = L.icon({
+        var icon_ff41a3818c5b43244c2e6305b74b578d = L.icon({
   "iconUrl": "https://cdn-icons-png.flaticon.com/512/2921/2921949.png",
   "iconSize": [60, 60],
   "iconAnchor": [30, 60],
@@ -329,24 +329,24 @@
 });
         
     
-        var popup_5bd8e4a2c9d98fe6148e1d12ae83b4e8 = L.popup({
+        var popup_7e5641967f2405dd8bbb0ff6d2d0b195 = L.popup({
   "maxWidth": 250,
 });
 
         
             
-                var html_0ac759ad584a30ea7af55e3029954213 = $(`<div id="html_0ac759ad584a30ea7af55e3029954213" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.ประศุก</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนเบา ๆ )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>31.9°C</b><br>             💧 ฝน 1 ชม.: <b>0.92 มม.</b>         </div>         </div>`)[0];
-                popup_5bd8e4a2c9d98fe6148e1d12ae83b4e8.setContent(html_0ac759ad584a30ea7af55e3029954213);
+                var html_6b5b8f2cbed62870c21b30da2ba84fc3 = $(`<div id="html_6b5b8f2cbed62870c21b30da2ba84fc3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; text-align: center; background-color: #ccf2ff; padding: 10px; border-radius: 15px; border: 2px solid white; box-shadow: 3px 3px 5px rgba(0,0,0,0.2);">             <h4 style="margin:0; color:#333;">🏡 ต.ประศุก</h4>             <img src="https://cdn-icons-png.flaticon.com/512/2921/2921949.png" width="50" style="margin: 5px;">             <br>             <b style="color:#555; font-size: 16px;">มีฝนตก</b><br>             <span style="font-size: 14px;">( ฝนแบบแรง )</span><br>             <hr style="border-top: 1px dashed #999;">             🌡️ อุณหภูมิ: <b>28.8°C</b><br>             💧 ฝน 1 ชม.: <b>4.6 มม.</b>         </div>         </div>`)[0];
+                popup_7e5641967f2405dd8bbb0ff6d2d0b195.setContent(html_6b5b8f2cbed62870c21b30da2ba84fc3);
             
         
 
-        marker_67c2c8cb9f2a06d8f8052a0fe79db4cf.bindPopup(popup_5bd8e4a2c9d98fe6148e1d12ae83b4e8)
+        marker_d97701e09f8f4a58b56da3836b71e320.bindPopup(popup_7e5641967f2405dd8bbb0ff6d2d0b195)
         ;
 
         
     
     
-                marker_67c2c8cb9f2a06d8f8052a0fe79db4cf.setIcon(icon_7ad206ce799607cbee736058206f314d);
+                marker_d97701e09f8f4a58b56da3836b71e320.setIcon(icon_ff41a3818c5b43244c2e6305b74b578d);
             
 </script>
 </html>
